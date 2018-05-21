@@ -1,16 +1,19 @@
 <template>
-  <v-container fluid>
+  <v-container class="primary" fluid>
     <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
-        <blockquote>
-          &#8220;First, solve the problem. Then, write the code.&#8221;
-          <footer>
-            <small>
-              <em>&mdash;John Johnson</em>
-            </small>
-          </footer>
-        </blockquote>
+      <v-layout column justify-space-around>
+        <v-flex>
+        <div class="landing-image-div">
+        <img src="@/assets/pink_sheet_1.jpg" id="landing-selfie">
+        </div>
+        </v-flex>
+        <br/>
+        <v-flex>
+        <div class="text">
+        <h1 class="secondary">JAFFA AHARONOV</h1>
+        <h3 class="accent">HI! I'M BEING REBUILT!</H3>
+        </div>
+        </v-flex>
       </v-layout>
     </v-slide-y-transition>
   </v-container>

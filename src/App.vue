@@ -1,74 +1,41 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      persistent
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      v-model="drawer"
-      enable-resize-watcher
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-tile
-          value="true"
-          v-for="(item, i) in items"
-          :key="i"
-        >
-          <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-toolbar
-      app
-      :clipped-left="clipped"
-    >
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>menu</v-icon>
-      </v-btn>
-    </v-toolbar>
-    <v-content>
+    <!-- <v-toolbar class="secondary">
+      <v-toolbar-title>Jaffa Aharonov</v-toolbar-title>
+    </v-toolbar> -->
+    <v-content class="primary">
       <router-view/>
     </v-content>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-tile @click="right = !right">
-          <v-list-tile-action>
-            <v-icon>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
+    <v-footer :fixed="fixed" app class="secondary">
+      <span>&copy; 2018 jaffa aharonov</span>
     </v-footer>
   </v-app>
 </template>
+<style>
 
+/* .landing-image-div {
+    height: 450px;
+    width: 675px;
+    overflow: hidden;
+    border-radius: 50%;
+} */
+.landing-image-div img {
+  
+    overflow: hidden;
+    border-radius: 50%;
+   width: 50%;
+  height: auto;
+  -webkit-clip-path: polygon(44% 0, 1% 24%, 30% 100%, 93% 68%, 91% 8%);
+clip-path: polygon(44% 0, 1% 24%, 30% 100%, 93% 68%, 91% 8%);
+
+}
+
+.text {
+  padding-left: 25%;
+  padding-right: 25%;
+  text-align: center;
+}
+</style>
 <script>
 export default {
   data () {
@@ -76,14 +43,14 @@ export default {
       clipped: false,
       drawer: true,
       fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire'
-      }],
+      // items: [{
+      //   icon: 'bubble_chart',
+      //   title: 'Inspire'
+      // }],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Jaffa Aharonov'
     }
   },
   name: 'App'
