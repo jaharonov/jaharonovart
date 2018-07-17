@@ -10,7 +10,7 @@
         <br/>
         <v-flex>
         <div class="text">
-        <h1 class="secondary">JAFFA AHARONOV</h1>
+        <h1 class="secondary">PROJECTS</h1>
         <h3 class="accent">HI! I'M BEING REBUILT!</H3>
         </div>
 
@@ -44,7 +44,3 @@ a {
   color: #42b983;
 }
 </style>
-
-
-
-  
