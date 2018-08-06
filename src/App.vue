@@ -43,7 +43,7 @@
           </v-btn>
         
         <v-btn flat>ABOUT</v-btn>
-        <v-btn flat>Link Three</v-btn>
+        <v-btn flat :to="{name: 'Home'}">HOME</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content class="primary">
@@ -87,7 +87,8 @@ export default {
       drawer: null,
       items: [
           { title: 'Projects', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
+          { title: 'About', icon: 'question_answer' },
+          { title: 'Home' }
       ]
     }
   },
